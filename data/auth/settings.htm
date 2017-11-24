@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="/favicon.ico">
+		<title>FREEBEES AC</title>
+		<link href="./../bootstrap.min.css" rel="stylesheet">
+		<script src="/auth/set.js" type="text/javascript"></script>
+	</head>
+	<body onload="start()">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 mx-auto text-center mt-5 pl-5 pr-5">
+					<div class="h4 mb-3 text-muted">НАСТРОЙКИ</div>
+					<label for="ssid" class="text-left d-flex">SSID</label>
+					<input type="text" class="form-control mb-3" id="ssid" name="ssid" value="" required="true" title="SSID" placeholder="SSID">
+					<label for="ssidpass" class="text-left d-flex">Пароль</label>
+					<input type="text" class="form-control mb-3" id="ssidpass" name="ssidpass" value="" required="true" title="Пароль" placeholder="Пароль">						
+					<label for="mqttuser" class="text-left d-flex">Пользователь MQTT</label>
+					<input type="text" class="form-control mb-3" id="mqttuser" name="mqttuser" value="" required="true" title="Пользователь MQTT" placeholder="Пользователь MQTT">
+					<label for="mqttpass" class="text-left d-flex">Пароль MQTT</label>
+					<input type="text" class="form-control mb-3" id="mqttpass" name="mqttpass" value="" required="true" title="Пользователь MQTT" placeholder="Пароль MQTT">					
+					<input type="hidden" class="form-control mb-3" id="relaytype" name="relaytype" value="" required="true" title="Тип реле" placeholder="Тип реле">					
+					<button onclick="saveConfig()" class="btn btn-primary mb-3">Сохранить</button>
+					<div class="alert alert-warning" role="alert">
+						После сохранения настроек устройство перезагрузится и попытается подключиться к указанной точке доступа
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
